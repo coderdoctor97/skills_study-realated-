@@ -1,7 +1,7 @@
 # Skills: Study-Related
 
 <p align="center">
-  <img src="assets/Logo/skill_study-related.png" alt="Skills: Study-Related logo" width="260">
+  <img src="assets/Logo/skill_study-related.png" alt="Skills: Study-Related logo" width="500">
 </p>
 
 <p align="center">
