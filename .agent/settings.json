@@ -1,0 +1,17 @@
+{
+  "agent": {
+    "name": "study-skills-agent",
+    "description": "Baseline configuration for agents working in the study-related skills repository."
+  },
+  "permissions": {
+    "read": ["./**"],
+    "write": ["./skills/**", "./assets/**", "./docs/**"],
+    "deny": ["Bash(rm -rf:*)"]
+  },
+  "behavior": {
+    "autoAddSkills": false,
+    "requireApprovalForStructuralChanges": true
+  },
+  "skillsDirectory": "skills",
+  "documentation": "agent.md"
+}
