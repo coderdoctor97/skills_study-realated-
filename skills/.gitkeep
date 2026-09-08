@@ -1,0 +1,7 @@
+# Skills are added manually to this directory.
+# Each skill is a folder containing at least a SKILL.md file.
+# Example structure:
+#   skills/
+#   └── example-skill/
+#       └── SKILL.md
+# See agent.md for conventions.
