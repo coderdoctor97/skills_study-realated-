@@ -34,16 +34,34 @@ skills_study-related/
 └── .editorconfig
 ```
 
-## Using the skills
+## Installation
 
-### Claude Code
-When skills are added under `skills/`, load them by copying or symlinking the
-relevant skill directory into a project's `.claude/skills/` folder, or reference
-this repository's skills directly.
+Skills install with the [Skills CLI](https://skills.sh) — the same `npx skills`
+installer [AI Hero](https://www.aihero.dev/) uses. No registry or npm publish is
+needed; the CLI reads skill packages straight from this repository.
 
-### Generic agents
-Load skills following your agent runtime's documentation. Baseline agent
-configuration lives in `.agent/settings.json`.
+Full reference and every flag: [`INSTALL.md`](./INSTALL.md).
+
+```bash
+REPO=coderdoctor97/skills_study-realated-   # or the full URL https://github.com/coderdoctor97/skills_study-realated-
+
+# All skills, project-local
+npx skills@latest add "$REPO" --all
+
+# All skills, global (every project)
+npx skills@latest add "$REPO" --all --global
+
+# One skill, project-local
+npx skills@latest add "$REPO" --skill=<skill-name>
+
+# One skill, global
+npx skills@latest add "$REPO" --skill=<skill-name> --global
+```
+
+> List what's available first: `npx skills@latest add "$REPO" --list`
+
+A `Makefile` is also provided for convenience: `make install`, `make install-global`,
+`make install-skill SKILL=<name>`, `make install-skill-global SKILL=<name>`, `make list`.
 
 ## Contributing
 

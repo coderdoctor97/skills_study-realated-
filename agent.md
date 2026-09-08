@@ -59,6 +59,29 @@ skills/
 - `autoAddSkills` is `false` — the agent should not create skills on its own.
 - Skill content is discovered under the `skills/` directory.
 
+## Installing skills (for agents)
+
+Given this repository's link, you can install skills with the Skills CLI
+(`npx skills`) — the same installer [AI Hero](https://www.aihero.dev/) uses. The
+canonical repo reference is `coderdoctor97/skills_study-realated-` (or the full URL
+`https://github.com/coderdoctor97/skills_study-realated-`).
+
+- **All skills, project-local:** `npx skills@latest add coderdoctor97/skills_study-realated- --all`
+- **All skills, global:** `npx skills@latest add coderdoctor97/skills_study-realated- --all --global`
+- **One skill, project-local:** `npx skills@latest add coderdoctor97/skills_study-realated- --skill=<skill-name>`
+- **One skill, global:** `npx skills@latest add coderdoctor97/skills_study-realated- --skill=<skill-name> --global`
+
+For fully automated (non-interactive) installs, append `-y` (`--yes`). When you
+already know the skill name, prefer the `--skill` form; otherwise use `--all`.
+Use `--list` to discover currently available skills:
+
+```bash
+npx skills@latest add coderdoctor97/skills_study-realated- --list
+```
+
+See [`INSTALL.md`](./INSTALL.md) for the full flag reference. Do not modify these
+installer commands — skills are added manually (see conventions above).
+
 ## Branding
 
 - Logo: `assets/Logo/skill_study-related.png`. Reference it in docs with a relative path.
